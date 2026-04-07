@@ -1448,7 +1448,7 @@ async function callDeepSeekAPI(key, prompt) {
                 { role: 'user', content: prompt }
             ],
             temperature: 0.4,
-            max_tokens: 3000
+            max_tokens: 4000
         })
     });
 
@@ -1475,7 +1475,7 @@ async function callOpenAIAPI(key, prompt) {
                 { role: 'user', content: prompt }
             ],
             temperature: 0.4,
-            max_tokens: 3000
+            max_tokens: 4000
         })
     });
 
@@ -1830,7 +1830,7 @@ document.getElementById('medGenBtn').addEventListener('click', async () => {
     outputTips.innerHTML = '';
 
     try {
-        const prompt = `你是一位马德里 EOI（Escuela Oficial de Idiomas）B2 西班牙语口语考试的辅导老师。请根据以下原文，设计一个完整的 Mediación 口语练习场景。
+        const prompt = `你是一位马德里 EOI（Escuela Oficial de Idiomas）B2 西班牙语口语考试的辅导老师。请根据以下原文，设计一个完整的 Mediación 口语练习场景。整体输出不要限制字数，各部分内容充分展开。
 
 **原文内容：**
 ${inputText}
@@ -1848,9 +1848,9 @@ ${inputText}
 列出原文中必须传达的核心信息点（4-6个要点）
 
 ## 🎤 参考口语表述
-用自然的口语风格写一段完整的口头表述（模拟你向听众解释原文内容）。
+用自然的口语风格写一段完整的口头表述（模拟你向听众解释原文内容）。注意：
+- 最终的口语表述本身约 150 词左右
 - 使用 B2 水平的口语表达
-- 长度适中（约 150-200 词的口语量）
 - 使用口语化的连接词（pues, o sea, es decir, es que, a ver, entonces...）
 - 适合 2 分钟的口头表述时间
 - 在括号中标注关键信息的传达方式
